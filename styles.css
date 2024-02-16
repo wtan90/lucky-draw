@@ -1,23 +1,22 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Light azure background */
-    color: #333;
+    background-color: #fff; /* White background for a clean look */
+    color: #333; /* Dark grey for text */
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #f9f9f9; /* Light grey background for the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 15px;
 }
 
 h1 {
-    color: #007bff;
+    color: #444; /* Dark grey for the title */
     text-align: center;
     margin-bottom: 30px;
 }
@@ -25,56 +24,42 @@ h1 {
 label {
     font-weight: bold;
     margin-top: 20px;
-    display: block;
-    color: #0056b3;
+    color: #555; /* Slightly lighter grey for labels */
 }
 
 input[type="text"], button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    border: 1px solid #ddd; /* Light grey border for inputs and buttons */
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 input[type="text"] {
-    border: 2px solid #007bff;
-    font-size: 16px;
+    background-color: #fff; /* White background for input fields */
 }
 
 button {
-    background-color: #28a745;
+    background-color: #4CAF50; /* Simplified to one button color for professionalism */
     color: white;
-    font-size: 18px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    opacity: 0.9;
-}
-
-#draw-button {
-    background-color: #ffc107;
-}
-
-#reset-button {
-    background-color: #dc3545;
+    background-color: #45a049; /* Darker shade of the button color on hover */
 }
 
 #participants-list, #winner-display {
     margin-top: 20px;
     padding: 20px;
-    background-color: #fafafa;
-    border: 1px solid #ddd;
+    background-color: #fff; /* White background for list and winner display */
+    border: 1px solid #eee; /* Very light grey border */
     border-radius: 4px;
 }
 
 #winner-display {
-    background-color: #28a745;
-    color: white;
+    color: #4CAF50; /* Green text for the winner for emphasis */
     font-size: 20px;
     text-align: center;
 }
@@ -85,26 +70,10 @@ button:hover {
         margin: 10px;
         padding: 10px;
     }
-
-    h1 {
-        font-size: 24px; /* Smaller font size for smaller screens */
-    }
-
-    label, input[type="text"], button {
-        font-size: 16px; /* Adjust font size for better readability on small devices */
-    }
-
-    button {
-        padding: 12px; /* Slightly larger padding for easier interaction */
-    }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 20px; /* Even smaller font size for very small screens */
-    }
-
-    label, input[type="text"], button {
-        font-size: 14px; /* Further adjust for small screens for better usability */
+    h1, label, input[type="text"], button {
+        font-size: 14px;
     }
 }
