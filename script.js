@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const winnerDisplay = document.getElementById('winner-display');
 
     let participants = [];
+    let prizeLocked = false;
 
     enterButton.addEventListener('click', function() {
         const name = nameInput.value.trim();
@@ -15,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             participants.push(name);
             participantsList.innerHTML += `<p>${name}</p>`;
             nameInput.value = '';
+        }
+        if (!prizeLocked && prizeInput.value.trim()) {
+            prizeInput.disabled = true; // Lock the prize input
+            prizeLocked = true;
         }
     });
 
@@ -34,5 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         winnerDisplay.innerHTML = '';
         nameInput.value = '';
         prizeInput.value = '';
+        prizeInput.disabled = false; // Unlock the prize input for a new game
+        prizeLocked = false;
     });
 });
