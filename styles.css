@@ -22,7 +22,7 @@ button {
     margin-bottom: 10px; /* Adds space between elements */
     border: 1px solid #ccc;
     border-radius: 4px; /* Rounded borders for aesthetics */
-    box-sizing: border-box; /* Ensures padding does not affect the overall width */
+    box-sizing: border-box; /* Ensures padding and border do not affect overall width */
 }
 
 button {
