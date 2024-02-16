@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    color: #c5a359; /* Subdued Gold for the title */
+    color: #b76e79; /* Subdued Gold for the title */
     text-align: center;
     margin-bottom: 30px;
 }
@@ -43,7 +43,7 @@ input[type="text"] {
 }
 
 button {
-    background-color: #c5a359; /* Subdued Gold for buttons */
+    background-color: #b76e79; /* Subdued Gold for buttons */
     color: #0a0a0a; /* Dark text for buttons */
     font-weight: bold;
     cursor: pointer;
@@ -57,7 +57,7 @@ button:hover {
     margin-top: 20px;
     padding: 20px;
     background-color: #121212; /* Very dark grey for list and winner display backgrounds */
-    color: #c5a359; /* Subdued Gold text for emphasis */
+    color: #b76e79; /* Subdued Gold text for emphasis */
     border: 1px solid #444; /* Border for list and winner display */
     border-radius: 4px;
 }
