@@ -1,33 +1,61 @@
-const form = document.getElementById('entry-form');
-const nameInput = document.getElementById('name');
-const prizeInput = document.getElementById('prize'); // Access the prize input field
-const participantsList = document.getElementById('participants-list');
-const drawButton = document.getElementById('draw-button');
-const resetButton = document.getElementById('reset-button');
-const winnerDisplay = document.getElementById('winner-display');
+document.addEventListener('DOMContentLoaded', function() {
+    // Access the form and relevant elements
+    const form = document.getElementById('entry-form');
+    const nameInput = document.getElementById('name');
+    const prizeInput = document.getElementById('prize');
+    const participantsList = document.getElementById('participants-list');
+    const drawButton = document.getElementById('draw-button');
+    const resetButton = document.getElementById('reset-button');
+    const winnerDisplay = document.getElementById('winner-display');
 
-const participants = [];
+    // Array to store participant names
+    const participants = [];
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  const name = nameInput.value;
-  participants.push(name);
-  participantsList.innerHTML += `<p>${name}</p>`;
-  nameInput.value = '';
-});
+    // Submit event listener for the form
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
 
-drawButton.addEventListener('click', function() {
-  if (participants.length > 0) {
-    const winnerIndex = Math.floor(Math.random() * participants.length);
-    const winner = participants[winnerIndex];
-    const prize = prizeInput.value; // Get the entered prize name
-    winnerDisplay.innerHTML = `<p>🎉 Winner: ${winner} wins ${prize} 🎁</p>`;
-  }
-});
+        // Get the entered name and trim whitespace
+        const name = nameInput.value.trim();
 
-resetButton.addEventListener('click', function() {
-  winnerDisplay.innerHTML = ''; 
-  participantsList.innerHTML = '';
-  participants.length = 0;
-  prizeInput.value = ''; // Clear the prize input field
+        // Add the name to the participants array if not empty
+        if (name) {
+            participants.push(name);
+
+            // Display the name in the participants list
+            participantsList.innerHTML += `<p>${name}</p>`;
+
+            // Clear the input field
+            nameInput.value = '';
+        }
+    });
+
+    // Click event listener for the draw button
+    drawButton.addEventListener('click', function() {
+        // Check if there are participants and a prize is entered
+        if (participants.length > 0 && prizeInput.value.trim() !== '') {
+            // Randomly select a winner
+            const winnerIndex = Math.floor(Math.random() * participants.length);
+            const winner = participants[winnerIndex];
+            const prize = prizeInput.value.trim(); // Get the entered prize
+
+            // Display the winner's name and the prize
+            winnerDisplay.innerHTML = `<p>🎉 Winner: ${winner} wins ${prize} 🎁</p>`;
+        } else {
+            // Alert if there are no participants or prize is not entered
+            alert("Please enter at least one participant and a prize.");
+        }
+    });
+
+    // Click event listener for the reset button
+    resetButton.addEventListener('click', function() {
+        // Clear the winner display and participants list
+        winnerDisplay.innerHTML = ''; 
+        participantsList.innerHTML = '';
+        // Reset the participants array
+        participants.length = 0;
+        // Clear the input fields
+        nameInput.value = '';
+        prizeInput.value = '';
+    });
 });
