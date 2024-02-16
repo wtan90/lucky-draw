@@ -31,12 +31,7 @@ form {
   margin-bottom: 20px;
 }
 
-.btn-group {
-  display: flex;
-  gap: 10px;
-}
-
-label {
+.label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -74,7 +69,7 @@ button[type="submit"]:hover, #draw-button:hover {
   background-color: #d5004e;
 }
 
-button[type="submit"]:focus, #draw-button:focus {
+button[type="submit"]:focus, #draw-button:focus, #reset-button:focus {
   outline: none;
 }
 
@@ -89,4 +84,9 @@ button[type="submit"]:focus, #draw-button:focus {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
 }
