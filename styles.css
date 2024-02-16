@@ -2,21 +2,21 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* White background for a clean look */
-    color: #333; /* Dark grey for text */
+    background-color: #1a1a1a; /* Black background for the body */
+    color: #ccc; /* Dark grey for text, ensuring readability */
 }
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9; /* Light grey background for the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #0a0a0a; /* Slightly lighter black for the container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
 
 h1 {
-    color: #444; /* Dark grey for the title */
+    color: #ffd700; /* Gold for the title */
     text-align: center;
     margin-bottom: 30px;
 }
@@ -24,42 +24,45 @@ h1 {
 label {
     font-weight: bold;
     margin-top: 20px;
-    color: #555; /* Slightly lighter grey for labels */
+    color: #ddd; /* Light grey for labels, improving contrast */
 }
 
 input[type="text"], button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    border: 1px solid #ddd; /* Light grey border for inputs and buttons */
+    border: 2px solid #555; /* Dark grey border for inputs and buttons */
+    background-color: #222; /* Very dark grey for input background */
+    color: #ddd; /* Light grey text for inputs */
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 input[type="text"] {
-    background-color: #fff; /* White background for input fields */
+    font-size: 16px;
 }
 
 button {
-    background-color: #4CAF50; /* Simplified to one button color for professionalism */
-    color: white;
+    background-color: #ffd700; /* Gold for buttons */
+    color: #0a0a0a; /* Dark text for buttons */
     font-weight: bold;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049; /* Darker shade of the button color on hover */
+    background-color: #cca200; /* Darker gold on hover */
 }
 
 #participants-list, #winner-display {
     margin-top: 20px;
     padding: 20px;
-    background-color: #fff; /* White background for list and winner display */
-    border: 1px solid #eee; /* Very light grey border */
+    background-color: #121212; /* Very dark grey for list and winner display backgrounds */
+    color: #ffd700; /* Gold text for emphasis */
+    border: 1px solid #444; /* Border for list and winner display */
     border-radius: 4px;
 }
 
 #winner-display {
-    color: #4CAF50; /* Green text for the winner for emphasis */
     font-size: 20px;
     text-align: center;
 }
@@ -67,8 +70,8 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
-        margin: 10px;
-        padding: 10px;
+        margin: 20px;
+        padding: 15px;
     }
 }
 
