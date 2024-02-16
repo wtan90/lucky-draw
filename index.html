@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prize Raffle Draw</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Prize Raffle</title>
+    <style>
+        /* Quick inline styles for demonstration */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; }
+        label, button { display: block; margin: 10px 0; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1><i class="material-icons">card_giftcard</i> Prize Raffle</h1>
-    </header>
-
     <div class="container">
+        <h1>Prize Raffle Draw</h1>
         <form id="entry-form">
             <label for="name">Enter your name:</label>
             <input type="text" id="name" required>
             <label for="prize">Enter the prize:</label>
             <input type="text" id="prize" required>
-            <div class="btn-group">
-                <button type="submit">Enter</button>
-            </div>
+            <button type="button" id="enter-button">Enter</button>
         </form>
-
+        <button id="draw-button">Draw</button>
+        <button id="reset-button">Reset</button>
         <div id="participants-list"></div>
         <div id="winner-display"></div>
-        <div class="btn-group">
-            <button id="draw-button">Draw</button>
-            <button id="reset-button">Reset</button>
-        </div>
     </div>
 
     <script src="script.js"></script>
