@@ -1,45 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const enterButton = document.getElementById('enter-button');
-    const drawButton = document.getElementById('draw-button');
-    const resetButton = document.getElementById('reset-button');
-    const nameInput = document.getElementById('name');
-    const prizeInput = document.getElementById('prize');
-    const participantsList = document.getElementById('participants-list');
-    const winnerDisplay = document.getElementById('winner-display');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Draw - Winner Takes All!</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure the path to your CSS file is correct -->
+    <style>
+        /* Your CSS can also be directly included here if not using an external file */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lucky Draw - Winner Takes All!</h1>
+        <form id="entry-form">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" required>
+            <label for="prize">Enter the prize:</label>
+            <input type="text" id="prize" required>
+            <button type="button" id="enter-button">Enter</button>
+        </form>
+        <button id="draw-button">Draw</button>
+        <button id="reset-button">Reset</button>
+        <div id="participants-list"></div>
+        <div id="winner-display"></div>
+    </div>
 
-    let participants = [];
-    let prizeEntered = false; // Track if the prize has been entered
-
-    enterButton.addEventListener('click', function() {
-        const name = nameInput.value.trim();
-        if (name) {
-            participants.push(name);
-            participantsList.innerHTML += `<p>${name}</p>`;
-            nameInput.value = '';
-        }
-        if (!prizeEntered && prizeInput.value.trim()) {
-            prizeInput.setAttribute('readonly', true); // Lock the prize input from being edited
-            prizeEntered = true;
-        }
-    });
-
-    drawButton.addEventListener('click', function() {
-        if (participants.length > 0 && prizeInput.value.trim()) {
-            const winnerIndex = Math.floor(Math.random() * participants.length);
-            const winnerName = participants[winnerIndex];
-            winnerDisplay.innerHTML = `Winner: ${winnerName} wins ${prizeInput.value.trim()}!`;
-        } else {
-            alert("Please enter participants and a prize.");
-        }
-    });
-
-    resetButton.addEventListener('click', function() {
-        participants = [];
-        participantsList.innerHTML = '';
-        winnerDisplay.innerHTML = '';
-        nameInput.value = '';
-        prizeInput.value = '';
-        prizeInput.removeAttribute('readonly'); // Remove readonly attribute, unlocking the prize input for a new game
-        prizeEntered = false;
-    });
-});
+    <script src="script.js"></script> <!-- Ensure the path to your JavaScript file is correct -->
+</body>
+</html>
