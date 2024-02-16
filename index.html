@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <title>Lucky Draw</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize Raffle Draw</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 <body>
     <header>
-        <h1><i class="material-icons">card_giftcard</i> Lucky Draw</h1>
+        <h1><i class="material-icons">card_giftcard</i> Prize Raffle</h1>
     </header>
 
     <div class="container">
@@ -17,13 +19,13 @@
             <input type="text" id="name" required>
             <label for="prize">Enter the prize:</label>
             <input type="text" id="prize" required>
-            <button type="submit">Enter</button>
+            <div class="btn-group">
+                <button type="submit">Enter</button>
+            </div>
         </form>
 
         <div id="participants-list"></div>
-
         <div id="winner-display"></div>
-
         <div class="btn-group">
             <button id="draw-button">Draw</button>
             <button id="reset-button">Reset</button>
