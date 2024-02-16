@@ -1,45 +1,110 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light azure background */
+    color: #333;
 }
 
 .container {
     max-width: 600px;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 label {
+    font-weight: bold;
+    margin-top: 20px;
     display: block;
-    margin-bottom: 5px;
+    color: #0056b3;
 }
 
-input[type="text"],
-button {
-    width: 100%; /* Ensures full width */
-    padding: 10px; /* Adds some padding for aesthetics */
-    margin-bottom: 10px; /* Adds space between elements */
-    border: 1px solid #ccc;
-    border-radius: 4px; /* Rounded borders for aesthetics */
-    box-sizing: border-box; /* Ensures padding and border do not affect overall width */
+input[type="text"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    border: 2px solid #007bff;
+    font-size: 16px;
 }
 
 button {
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
+    font-size: 18px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #0056b3;
+    opacity: 0.9;
 }
 
-#participants-list,
-#winner-display {
+#draw-button {
+    background-color: #ffc107;
+}
+
+#reset-button {
+    background-color: #dc3545;
+}
+
+#participants-list, #winner-display {
     margin-top: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px dashed #ccc;
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#winner-display {
+    background-color: #28a745;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+    }
+
+    label, input[type="text"], button {
+        font-size: 16px; /* Adjust font size for better readability on small devices */
+    }
+
+    button {
+        padding: 12px; /* Slightly larger padding for easier interaction */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Even smaller font size for very small screens */
+    }
+
+    label, input[type="text"], button {
+        font-size: 14px; /* Further adjust for small screens for better usability */
+    }
 }
