@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    color: #b76e79; /* Subdued Gold for the title */
+    color: #bfa76f; /* Subdued gold for the title */
     text-align: center;
     margin-bottom: 30px;
 }
@@ -43,21 +43,21 @@ input[type="text"] {
 }
 
 button {
-    background-color: #b76e79; /* Subdued Gold for buttons */
+    background-color: #bfa76f; /* Subdued gold for buttons */
     color: #0a0a0a; /* Dark text for buttons */
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #cca200; /* Darker gold on hover */
+    background-color: #a08f5c; /* Slightly darker shade of subdued gold on hover */
 }
 
 #participants-list, #winner-display {
     margin-top: 20px;
     padding: 20px;
     background-color: #121212; /* Very dark grey for list and winner display backgrounds */
-    color: #b76e79; /* Subdued Gold text for emphasis */
+    color: #bfa76f; /* Subdued gold text for emphasis */
     border: 1px solid #444; /* Border for list and winner display */
     border-radius: 4px;
 }
