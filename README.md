@@ -1,1 +1,1 @@
-[Lucky Draw - Winner Takes All!](https://app.netlify.com/sites/prizedraws)
+[Lucky Draw - Winner Takes All!](https://prizedraws.netlify.app/)
